@@ -4,8 +4,8 @@ body {
 }
 
 h1 {
-	font-size: 48;px
-	color: black;
+	font-size: 48px;
+	color: green;
 }
 
 h2 {
@@ -15,5 +15,5 @@ h2 {
 
 h3, h4, h5 {
 	font-size: 36px;
-	color: fuschia;
+	color: orange;
 }
