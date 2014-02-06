@@ -9,12 +9,8 @@ h1 {
 	color: green;
 }
 
-h2 {
-	font-size: 20px;
-	color: red;
-}
 
-h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	font-size: 36px;
 	color: orange;
 }
@@ -23,4 +19,10 @@ h3, h4, h5, h6 {
 	border-width: 10px;
 	margin: 28px;
 	border-style: solid;
+}
+
+#body {
+	border width: 10px;
+	margin: 28px;
+	border-style: dashed;
 }
