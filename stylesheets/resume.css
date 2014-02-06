@@ -22,7 +22,7 @@ h2, h3, h4, h5, h6 {
 }
 
 #body {
-	border width: 10px;
+	border-width: 10px;
 	margin: 28px;
 	border-style: dashed;
 }
