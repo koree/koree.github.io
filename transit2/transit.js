@@ -95,7 +95,12 @@ for (var i =0; i < 3; i++){
                 });
             }
 
-           distance();
+           var length = distance(); 
+           var shortest = 4000; 
+           if (length < shortest){
+            shortest = length;
+           }
+
 
 
                 google.maps.event.addListener(m, 'click', function(){
@@ -108,7 +113,7 @@ for (var i =0; i < 3; i++){
             }
     
             }
-
+console.log(shortest);
     }
     
 
@@ -133,7 +138,7 @@ Number.prototype.toRad = function(){
             var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
             var d = R * c;
 
-            console.log(d); 
+            return d;
 
 
 }
