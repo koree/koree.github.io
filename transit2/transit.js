@@ -11,7 +11,6 @@ function getMyLocation() {
 			}
 
 function initialize(position){
-    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
     var myLat= position.coords.latitude;
     var myLng= position.coords.longitude;
 
@@ -21,6 +20,7 @@ function initialize(position){
         center: me,
         zoom:11
     };
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
     var marker = new google.maps.Marker({
         position: me,
