@@ -27,7 +27,7 @@ function getMyLocation() {
 						console.log(myLng);
 						var me = new google.maps.LatLng(myLat, myLng);
 
-						rendermap();
+						//rendermap();
 						
 					});map.setCenter(me);
 zoom:11;
@@ -37,9 +37,9 @@ zoom:11;
 				}
 			}
 
-function rendermap() {
+//function rendermap() {
  	
-}
+//}
 
 function parse() {
 
