@@ -9,6 +9,7 @@ function getMyLocation() {
 			}
 
 function initialize(position){
+    console.log('here?')
 var myLat= position.coords.latitude;
 var myLng= position.coords.longitude;
 
@@ -23,7 +24,7 @@ var marker = new google.maps.Marker({
     title: "Work damn you"
 });
 marker.setMap(map);
-infoWindow = new google.maps.infoWindow();
+infoWindow = new google.maps.InfoWindow();
 google.maps.event.addListener(marker, 'click', function(){
     infoWindow.setContent(marker.title);
     infoWindow.open(map, marker);
