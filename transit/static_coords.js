@@ -115,6 +115,6 @@ str = '[{"line":"Blue","station":"Airport","lat":42.374262,"lng":-71.030395},
 {"line":"Red","station":"Wollaston","lat":42.2665139,"lng":-71.0203369}] 
 ';
 parsed = JSON.parse(str);
-console.log(parsed[0]);
+console.log(parsed[Red]);
 }
 	
