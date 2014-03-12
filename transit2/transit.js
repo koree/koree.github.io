@@ -42,10 +42,10 @@ str = '[{"line":"blue","stations":[{"station_name":"Airport", "latitude":"42.374
     var request = new XMLHttpRequest();
     request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
     request.onreadystatechange = function () {
-        if (request.status ==200){
+        if (request.status ==200 && request.readyState ==4){
             lineinfo = JSON.parse(request.responseText);
-            color = scheduleData["line"];
-        }else if(request.status == 500){
+            color = lineinfo["line"];
+        }else if(request.status == 500 && request.readyState==4){
             alert ("unable to get MBTA info at this time");
         }
     }
