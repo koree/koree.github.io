@@ -23,7 +23,7 @@ function getMyLocation() {
 					navigator.geolocation.getCurrentPosition(function(position) {
 						myLat = position.coords.latitude;
 						myLng = position.coords.longitude;
-						console.log ('maybe');
+						console.log ('nope');
 						console.log(myLng);
 						var me = new google.maps.LatLng(myLat, myLng);
 
