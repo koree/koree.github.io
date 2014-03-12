@@ -57,7 +57,7 @@ mapinfo();
 var locations = [];
 
 function mapinfo(){
-for (var i =0; i < 3: ++i){
+for (var i =0; i < 3; ++i){
     if (data[i]["line"] == color){
         var array = i;
         var j = 0;
