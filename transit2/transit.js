@@ -13,7 +13,7 @@ var myLat= position.coords.latitude;
 var myLng= position.coords.longitude;
 
 var me= new google.maps.LatLng(myLat, myLng);
-var myOptions {
+var myOptions = {
     center: me,
     zoom:11
 };
