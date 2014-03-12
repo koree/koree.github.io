@@ -11,7 +11,7 @@ var map;
 var request;
 
 function initialize() {
-		station();
+		//station();
         var myOptions = {
 
             center: new google.maps.LatLng(myLat, myLng),
@@ -35,7 +35,7 @@ function getMyLocation() {
 						console.log(myLat, myLng);
 						
 
-						renderMap();
+						//renderMap();
 						
 					});
 					
