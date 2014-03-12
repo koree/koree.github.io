@@ -2,7 +2,7 @@ var myLat = 0;
 var myLng = 0;
 var lineData = null;
 
-function initialize() {console.log('hello world');
+function initialize() {
 		var myOptions = {
 
 			center: new google.maps.LatLng(0,0),
@@ -22,7 +22,7 @@ function getMyLocation()
 					navigator.geolocation.getCurrentPosition(function(position) {
 						myLat = position.coords.latitude;
 						myLng = position.coords.longitude;
-						renderMap();
+						rendermap();
 						console.log ('maybe');
 						console.log(myLng);
 					});
