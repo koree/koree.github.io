@@ -58,15 +58,15 @@ var locations = [];
 
 function mapinfo(){
 for (var i =0; i < 3; ++i){
-    if (data[i]["line"] == color){
+    if (parsed[i]["line"] == color){
         var array = i;
         var j = 0;
-            for (var j = 0; data[i]["stations"][j] != null; ++j){
-                t_coords = new google.maps.LatLng(data[i]["stations"][j]["latitude"],
-                    data[i]["stations"][j]["latitude"])
+            for (var j = 0; parsed[i]["stations"][j] != null; ++j){
+                t_coords = new google.maps.LatLng(parsed[i]["stations"][j]["latitude"],
+                    parsed[i]["stations"][j]["latitude"])
                 stationMarkers.push(new google.maps.Marker({
                  position: t_coords,
-                 title: data[i]["stations"][j]["station_name"]
+                 title: parsed[i]["stations"][j]["station_name"]
             }));
 
             }
