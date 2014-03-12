@@ -125,7 +125,7 @@ Number.prototype.toRad = function(){
             var R = 3959; //miles radius
             var x1 = lat2-lat1;
             var dLat = x1.toRad();
-            var x2 = x2.toRad();
+            var x2 = lng2-lng1;
             var dLon = x2.toRad();
             var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
                         Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) *
