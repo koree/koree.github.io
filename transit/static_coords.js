@@ -25,9 +25,12 @@ function getMyLocation() {
 						myLng = position.coords.longitude;
 						console.log ('maybe');
 						console.log(myLng);
+						var me = new google.maps.LatLng(myLat, myLng);
+
 						rendermap();
 						
-					});
+					});map.setCenter(me);
+zoom:11;
 				}
 				else {
 					alert("Geolocation is not supported by your web browser.  What a shame!");
@@ -35,9 +38,7 @@ function getMyLocation() {
 			}
 
 function rendermap() {
-var me = new google.maps.LatLng(myLat, myLng);
-map.setCenter(me);
-zoom:11; 	
+ 	
 }
 
 function parse() {
