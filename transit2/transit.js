@@ -62,7 +62,7 @@ var locations = [];
 function mapinfo(){
 
 for (var i =0; i < 3; i++){
-
+console.log(parsed[i]["line"])
     if (parsed[i]["line"] == color){                    
         console.log('come on already')
 
