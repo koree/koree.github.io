@@ -75,15 +75,23 @@ for (var i =0; i < 3; i++){
                     parsed[i]["stations"][j]["longitude"]);
                 //console.log(parsed[i]["stations"][j]["station_name"]);
                 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-
+                
+                if (parsed[i]["line"]==red){
+                        
                 var m = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"],
                     map: map,
-                    if (parsed[i]["line"]==red){
-                        icon: iconBase + 'schools_maps.png'
-                    }
+                    icon: iconBase + 'schools_maps.png'
+                    
                 });
+            }else {
+                var m = new google.maps.Marker({
+                    position: t_coords, 
+                    title: parsed[i]["stations"][j]["station_name"],
+                    map: map,
+                });
+            }
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(m.title);
                     bubble.open(map, m);
