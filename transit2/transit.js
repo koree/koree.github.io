@@ -94,9 +94,8 @@ for (var i =0; i < 3; i++){
                 });
             }
 
-console.log(m.position.lat());
-            //var lat2 = parsed[i]["stations"][j]["latitude"]; //m.position.lat()  ????
-            //var lng2 = parse[i]["stations"][j]["longitude"];
+            var lat2 = m.position.lat(); 
+            var lng2 = m.position.lng();
             var lat1 = marker.position.lat();
             var lng1 = marker.position.lng();
 
