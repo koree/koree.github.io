@@ -15,7 +15,7 @@ function initialize() {
 		getMyLocation();
 		parse();
 	}
-	//google.map.event.addDomListen(window,'load', initialize);
+
 function getMyLocation() 
 			{
 				if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
@@ -23,6 +23,8 @@ function getMyLocation()
 						myLat = position.coords.latitude;
 						myLng = position.coords.longitude;
 						renderMap();
+						console.log ('maybe');
+						console.log(myLng);
 					});
 				}
 				else {
@@ -44,4 +46,4 @@ function parse() {
 	request.send(null);
 }
 
-	lineData = JSON.parse(reqest.responseText)
+	//lineData = JSON.parse(reqest.responseText)
