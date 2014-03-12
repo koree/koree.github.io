@@ -1,21 +1,19 @@
 var myLat = 0;
 var myLng = 0;
-var lineData = null;
+/*var lineData = null;
 var me = new google.maps.LatLng(myLat, myLng)
 var map;
-var myOptions = {
 
-			center: me,
-			zoom: 11 
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		};
 var marker;
 var	places;// "..." is stuff you have to fill in
-
+*/
 function initialize() {
-		
-		
-	
+		var myOptions = {
+
+			center: new google.maps.LatLng(150,150),
+			zoom: 11 
+			//mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
 		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 		getMyLocation();
 		parse();
@@ -28,10 +26,10 @@ function getMyLocation() {
 						myLat = position.coords.latitude;
 						myLng = position.coords.longitude;
 						console.log ('nope');
-						console.log(myLng);
+						console.log(myLat, myLng);
 						
 
-						rendermap();
+						//rendermap();
 						
 					});
 					
@@ -50,7 +48,7 @@ function rendermap() {
  	});
  	marker.setMap(map);
 
- 	
+
 
 }
 
@@ -62,4 +60,4 @@ function parse() {
 	request.send(null);
 }
 
-	//lineData = JSON.parse(reqest.responseText)
+	//lineData = JSON.parse(request.responseText)
