@@ -1,22 +1,15 @@
-
 <!DOCTYPE html>
-
 <html>
-
 <head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>MBTA Map and Schedule Rodeo</title>
+<meta http-equiv="Content-Type" content="text/html"; charset=ISO-8859-1>
+<link rel="stylesheet" href="style.css">
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<script src="transit.js"></script>
 
-	<script src ="http://maps.googleapis.com/maps/api/js?libraries =places&sensor=true"></script>
-	<link rel="stylesheet" type="text/css" media ="screen" href="style.css"/>
-	<script src="my_mbta.js"></script>
-	
 </head>
-
-<!--<body onload="init()">-->
-<body onload="parse_json()">
-	<div id="map-canvas"></div>
+<body onload="getMyLocation()">
+	<div id="map_canvas" </div>
 </body>
-
 </html>
