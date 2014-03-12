@@ -92,6 +92,8 @@ for (var i =0; i < 3; i++){
                     map: map,
                 });
             }
+            console.log(parsed[i]["stations"][j]["latitude"]);
+
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(m.title);
                     bubble.open(map, m);
