@@ -54,7 +54,7 @@ mapinfo();
 }
 
 function mapinfo(){
-console.log(myLng);
+console.log("made it to here");
 
 }
 
