@@ -94,7 +94,7 @@ for (var i =0; i < 3; i++){
                 });
             }
             console.log(parsed[i]["stations"][j]["latitude"]);
-            console.log(marker.position["k"]);
+            console.log(marker.position.lat);
 
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(m.title);
