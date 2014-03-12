@@ -34,7 +34,7 @@ function getMyLocation()
 
 function rendermap() {
 me = new google.maps.LatLng(myLat, myLng)
-map.setCenter(me,12)
+var map.setCenter(me,12)
 zoom:11 	
 }
 
