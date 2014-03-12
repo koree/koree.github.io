@@ -83,6 +83,7 @@ for (var i =0; i < 3; i++){
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(m.title);
                     bubble.open(map, m);
+                    console.log(m.title);
                 });
                        
             }
