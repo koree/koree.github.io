@@ -5,7 +5,7 @@ var lineData = null;
 function initialize() {
 		var myOptions = {
 
-			center: new google.maps.LatLng(42.3875,-71.1000),
+			center: new google.maps.LatLng(0,0),
 			zoom: 11 };
 		// "..." is stuff you have to fill in
 
@@ -16,7 +16,7 @@ function initialize() {
 		parse();
 	}
 	//google.map.event.addDomListen(window,'load', initialize);
-function getMyLocation()
+function getMyLocation() 
 			{
 				if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
 					navigator.geolocation.getCurrentPosition(function(position) {
