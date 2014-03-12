@@ -9,9 +9,10 @@ function getMyLocation() {
 			}
 
 function initialize(position){
-    console.log('here?')
+    console.log('here?');
 var myLat= position.coords.latitude;
 var myLng= position.coords.longitude;
+console.log(myLat);
 
 var me= new google.maps.LatLng(myLat, myLng);
 var myOptions = {
