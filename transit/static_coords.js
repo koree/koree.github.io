@@ -9,14 +9,16 @@ var	places;// "..." is stuff you have to fill in
 */
 var map;
 var request;
-var myOptions = {
 
-			center: new google.maps.LatLng(myLat, myLng),
-			zoom: 11 
-			//mapTypeId: google.maps.MapTypeId.ROADMAP
-		};
 function initialize() {
 		station();
+        var myOptions = {
+
+            center: new google.maps.LatLng(myLat, myLng),
+            zoom: 11 
+            //mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
 		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 		getMyLocation();
         
@@ -55,7 +57,7 @@ function parse() {
 
 	request = new XMLHttpRequest();
 	request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
-	request.onreadystatechange = dataReady;
+	request.onreadystatechange = functionsomething;
 	request.send(null);
 }
 
@@ -115,6 +117,6 @@ str = '[{"line":"Blue","station":"Airport","lat":42.374262,"lng":-71.030395},
 {"line":"Red","station":"Wollaston","lat":42.2665139,"lng":-71.0203369}]}] 
 ';
 parsed = JSON.parse(str);
-console.log(parsed[Red]);
+console.log(parsed[0]);
 }
 	
