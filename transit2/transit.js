@@ -1,7 +1,7 @@
 var map;
 var me;
 var color;
-
+var bubble = new google.maps.InfoWindow();
 function getMyLocation() {
 				console.log ('hi');
 				if (navigator.geolocation) { 
@@ -28,7 +28,7 @@ function initialize(position){
         title: "Work damn you"
     });
     marker.setMap(map);
-    bubble = new google.maps.InfoWindow();
+  
     google.maps.event.addListener(marker, 'click', function(){
         bubble.setContent(marker.title);
         bubble.open(map, marker);
@@ -66,10 +66,16 @@ for (var i =0; i < 3; ++i){
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
                 t_coords = new google.maps.LatLng(parsed[i]["stations"][j]["latitude"],
                     parsed[i]["stations"][j]["latitude"])
-                stationMarkers.push(new google.maps.Marker({
-                 position: t_coords,
-                 title: parsed[i]["stations"][j]["station_name"]
-            }));
+                var m = new google.maps.Marker({
+                    position: t_coords, 
+                    title: parsed[i]["stations"][j]["station_name"]
+                    });
+                google.maps.event.addListenr(m, 'click', function(){
+                    bubble.setContent(parsed[i]["stations"][j]["station_name"]);
+                    bubble.open(map, m)
+                });
+                        stationMarkers.push(m);
+            }
 
             }
     
