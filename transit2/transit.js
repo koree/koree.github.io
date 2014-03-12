@@ -127,7 +127,7 @@ for (var i =0; i < 3; i++){
 }
 
 Number.prototype.toRad = function(){
-                
+               return this * Math.PI / 180; 
             }
 
 
