@@ -93,9 +93,26 @@ for (var i =0; i < 3; i++){
                     map: map,
                 });
             }
-            console.log(parsed[i]["stations"][j]["latitude"]);
-            console.log(marker.position.lat());
-            console.log(marker.position.lng());
+
+
+            var lat2 = parsed[i]["stations"][j]["latitude"];
+            var lng2 = parse[i]["stations"][j]["longitude"];
+            var lat1 = marker.position.lat();
+            var lng1 = marker.position.lng();
+
+            var R = 3959; //miles radius
+            var x1 = lat2-lat1;
+            var dLat = x1.toRad();
+            var x2 = x2.toRad();
+            var dLon = x2.toRad();
+            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                        Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) *
+                        Math.sin(dLon/2) * Math.sin(dlon/2); 
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            var d = R * c;
+
+            console.log(d); 
+
 
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(m.title);
@@ -110,7 +127,9 @@ for (var i =0; i < 3; i++){
     }
 }
 
-
+Number.prototype.toRad = function(){
+                
+            }
 
 
 
