@@ -30,7 +30,7 @@ function getMyLocation() {
 						//rendermap();
 						
 					});
-					map.setCenter(me);
+					//map.setCenter(me);
 				}
 				else {
 					alert("Geolocation is not supported by your web browser.  What a shame!");
