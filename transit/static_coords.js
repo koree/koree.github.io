@@ -112,7 +112,7 @@ str = '[{"line":"Blue","station":"Airport","lat":42.374262,"lng":-71.030395},
 {"line":"Red","station":"Savin Hill","lat":42.31129,"lng":-71.053331},
 {"line":"Red","station":"Shawmut","lat":42.29312583,"lng":-71.06573796},
 {"line":"Red","station":"South Station","lat":42.352271,"lng":-71.055242},
-{"line":"Red","station":"Wollaston","lat":42.2665139,"lng":-71.0203369}] 
+{"line":"Red","station":"Wollaston","lat":42.2665139,"lng":-71.0203369}]}] 
 ';
 parsed = JSON.parse(str);
 console.log(parsed[Red]);
