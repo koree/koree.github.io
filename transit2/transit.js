@@ -26,7 +26,7 @@ function initialize(position){
 
     var marker = new google.maps.Marker({
         position: me,
-        title: "Work damn you"
+        title: "Here you are!"
     });
     marker.setMap(map);
   
@@ -78,6 +78,7 @@ for (var i =0; i < 3; i++){
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"]
                     });
+                m.setMap(map);
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(parsed[i]["stations"][j]["station_name"]);
                     bubble.open(map, m)
