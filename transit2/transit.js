@@ -81,7 +81,7 @@ for (var i =0; i < 3; i++){
                     });
                 m.setMap(map);
                 google.maps.event.addListener(m, 'click', function(){
-                   // bubble.setContent(parsed[i]["stations"][j]["station_name"]);
+                    bubble.setContent(m.title);
                     bubble.open(map, m)
                 });
                        
