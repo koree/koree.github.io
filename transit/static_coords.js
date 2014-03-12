@@ -7,13 +7,16 @@ var map;
 var marker;
 var	places;// "..." is stuff you have to fill in
 */
-function initialize() {
-		var myOptions = {
+var map;
+var request;
+var myOptions = {
 
-			center: new google.maps.LatLng(150,150),
+			center: new google.maps.LatLng(myLat, myLng),
 			zoom: 11 
 			//mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
+function initialize() {
+		
 		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 		getMyLocation();
 		parse();
@@ -29,7 +32,7 @@ function getMyLocation() {
 						console.log(myLat, myLng);
 						
 
-						//rendermap();
+						renderMap();
 						
 					});
 					
@@ -39,14 +42,9 @@ function getMyLocation() {
 				}
 			}
 
-function rendermap() {
-	var me = new google.maps.LatLng(myLat, myLng);
- 	map.panTo(me);
- 	marker = new google.maps.Marker({
- 		position: me,
- 		title: "Here I Am!"
- 	});
- 	marker.setMap(map);
+function renderMap() {
+ me = new google.maps.LatLng(myLat, myLng);
+ 	map.setCenter(me,12);
 
 
 
