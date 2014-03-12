@@ -95,8 +95,8 @@ for (var i =0; i < 3; i++){
                 });
             }
 
-           var length = distance(); 
-           var shortest = 4000; 
+           var length = distance(); //distance function
+           var shortest = (4000/1); 
            if (length < shortest){
             shortest = length;
            }
