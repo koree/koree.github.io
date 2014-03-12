@@ -65,14 +65,15 @@ function mapinfo(){
 for (var i =0; i < 3; i++){
 
     if (parsed[i]["line"] == color){ 
-                       
+
         console.log('come on already')
 
-        var array = i;
-        var j = 0;
+    
+        
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
                 t_coords = new google.maps.LatLng(parsed[i]["stations"][j]["latitude"],
-                    parsed[i]["stations"][j]["latitude"])
+                    parsed[i]["stations"][j]["longitude"])
+                console.out(tcoords);
                 var m = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"]
