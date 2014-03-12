@@ -77,13 +77,12 @@ for (var i =0; i < 3; i++){
                 
                 var m = new google.maps.Marker({
                     position: t_coords, 
-                    title: parsed[i]["stations"][j]["station_name"]
-                    });
-                m.setMap(map);
+                    title: parsed[i]["stations"][j]["station_name"],
+                    map: map
+                });
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(m.title);
                     bubble.open(map, m);
-                    console.log(m.title);
                 });
                        
             }
