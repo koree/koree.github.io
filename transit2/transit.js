@@ -76,7 +76,7 @@ console.log(parsed[i]["line"])
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"]
                     });
-                google.maps.event.addListenr(m, 'click', function(){
+                google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(parsed[i]["stations"][j]["station_name"]);
                     bubble.open(map, m)
                 });
