@@ -30,7 +30,7 @@ function getMyLocation() {
 						rendermap(myLat,myLng);
 						
 					});
-					//map.setCenter(me);
+					
 				}
 				else {
 					alert("Geolocation is not supported by your web browser.  What a shame!");
@@ -38,7 +38,7 @@ function getMyLocation() {
 			}
 
 function rendermap(myLat, myLng) {
-	var me = new google.maps.LatLng(myLat, myLng);
+	map = new google.maps.LatLng(myLat, myLng);
  	map.setCenter(me);
 
 }
