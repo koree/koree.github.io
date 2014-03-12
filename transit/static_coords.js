@@ -16,10 +16,10 @@ var myOptions = {
 			//mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 function initialize() {
-		
+		station();
 		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 		getMyLocation();
-        station();
+        
 //		parse();
 	}
 
