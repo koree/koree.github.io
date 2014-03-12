@@ -73,6 +73,7 @@ for (var i =0; i < 3; i++){
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
                 t_coords = new google.maps.LatLng(parsed[i]["stations"][j]["latitude"],
                     parsed[i]["stations"][j]["longitude"]);
+                console.log(parsed[i]["stations"][j]["station_name"]);
                 
                 var m = new google.maps.Marker({
                     position: t_coords, 
