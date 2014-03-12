@@ -18,6 +18,7 @@ function initialize() {
 
 function getMyLocation() 
 			{
+				console.log ('hi');
 				if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
 					navigator.geolocation.getCurrentPosition(function(position) {
 						myLat = position.coords.latitude;
@@ -34,7 +35,7 @@ function getMyLocation()
 
 function rendermap() {
 me = new google.maps.LatLng(myLat, myLng)
-var map.setCenter(me,12)
+map.setCenter(me,12)
 zoom:11 	
 }
 
