@@ -2,6 +2,7 @@ var map;
 var me;
 var color;
 var bubble = new google.maps.InfoWindow();
+var marker;
 
 function getMyLocation() {
 				
@@ -24,7 +25,7 @@ function initialize(position){
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-    var marker = new google.maps.Marker({
+    marker = new google.maps.Marker({
         position: me,
         title: "Here you are!"
     });
@@ -93,7 +94,7 @@ for (var i =0; i < 3; i++){
                 });
             }
             console.log(parsed[i]["stations"][j]["latitude"]);
-            console.log(navigator.geolocation.getCurrentPosition());
+            console.log(marker.latitude);
 
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(m.title);
