@@ -11,6 +11,7 @@ var map;
 var request;
 
 function initialize() {
+    console.log('hi');
 		//station();
         var myOptions = {
 
