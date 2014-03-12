@@ -2,6 +2,7 @@ var map;
 var me;
 var color;
 var bubble = new google.maps.InfoWindow();
+
 function getMyLocation() {
 				console.log ('hi');
 				if (navigator.geolocation) { 
@@ -61,8 +62,9 @@ var locations = [];
 function mapinfo(){
 
 for (var i =0; i < 3; i++){
+                        console.log('come on already')
+
     if (parsed[i]["line"] == color){
-                    console.log('come on already')
         var array = i;
         var j = 0;
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
