@@ -47,6 +47,7 @@ str = '[{"line":"blue","stations":[{"station_name":"Airport", "latitude":"42.374
         if (request.status ==200 && request.readyState ==4){
             lineinfo = JSON.parse(request.responseText);
             color = lineinfo["line"];
+            console.log(color);
         }else if(request.status == 500 && request.readyState==4){
             alert ("unable to get MBTA info at this time");
         }
