@@ -3,7 +3,7 @@ var me;
 var color;
 var bubble = new google.maps.InfoWindow();
 var marker;
-var m;
+
 
 function getMyLocation() {
 				
@@ -80,7 +80,7 @@ for (var i =0; i < 3; i++){
                 
                 if (color == 'red'){
                         
-                m = new google.maps.Marker({
+                var m = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"],
                     map: map,
@@ -88,14 +88,14 @@ for (var i =0; i < 3; i++){
                     
                 });
             }else {
-                 m = new google.maps.Marker({
+                 var m = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"],
                     map: map,
                 });
             }
 
-           var length = distance(); //distance function
+           var length = distance(m); //distance function
            var shortest = (4000/1); 
            if (length < shortest){
             shortest = length;
@@ -117,7 +117,7 @@ console.log(shortest);
     }
     
 
-function distance (){
+function distance (m){
 Number.prototype.toRad = function(){
                return this * Math.PI / 180; 
            }
