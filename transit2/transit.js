@@ -24,7 +24,7 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 var marker = new google.maps.Marker({
     position: me,
     title: "Work damn you"
-});console.log(myLat);
+});
 marker.setMap(map);
 infoWindow = new google.maps.InfoWindow();
 google.maps.event.addListener(marker, 'click', function(){
@@ -33,7 +33,7 @@ google.maps.event.addListener(marker, 'click', function(){
 });
 
 parse();
-
+console.log(myLat);
 }
 
 function parse() {
