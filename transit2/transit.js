@@ -82,7 +82,7 @@ for (var i =0; i < 3; i++){
                 m.setMap(map);
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(m.title);
-                    bubble.open(map, m)
+                    bubble.open(map, m);
                 });
                        
             }
