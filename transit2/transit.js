@@ -101,7 +101,7 @@ for (var i =0; i < 3; i++){
             shortest = length;
            }
 
-
+console.log(shortest);
 
                 google.maps.event.addListener(m, 'click', function(){
                     bubble.setContent(m.title);
@@ -113,7 +113,7 @@ for (var i =0; i < 3; i++){
             }
     
             }
-console.log(shortest);
+
     }
     
 
