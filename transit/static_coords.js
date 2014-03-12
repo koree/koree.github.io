@@ -4,7 +4,7 @@ var lineData = null;
 
 function initialize() {
 		var myOptions = {
-
+console.log('hello world');
 			center: new google.maps.LatLng(0,0),
 			zoom: 11 };
 		// "..." is stuff you have to fill in
