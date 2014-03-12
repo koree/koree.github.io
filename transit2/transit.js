@@ -80,7 +80,7 @@ console.log(parsed[i]["line"])
                     bubble.setContent(parsed[i]["stations"][j]["station_name"]);
                     bubble.open(map, m)
                 });
-                        stationMarkers.push(m);
+                        marker.push(m);
             }
 
             }
