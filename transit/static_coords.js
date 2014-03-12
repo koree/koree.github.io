@@ -25,12 +25,12 @@ function getMyLocation() {
 						myLng = position.coords.longitude;
 						console.log ('nope');
 						console.log(myLng);
-						var me = new google.maps.LatLng(myLat, myLng);
+						center = new google.maps.LatLng(myLat, myLng);
 
 						//rendermap();
 						
-					});map.setCenter(me);
-zoom:11;
+					});
+					map.setCenter(me);
 				}
 				else {
 					alert("Geolocation is not supported by your web browser.  What a shame!");
