@@ -62,7 +62,7 @@ function mapinfo(){
 
 for (var i =0; i < 3; ++i){
     if (parsed[i]["line"] == color){
-                    console.log(parsed[i]["stations"])
+                    console.log('come on already')
         var array = i;
         var j = 0;
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
