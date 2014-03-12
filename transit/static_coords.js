@@ -25,9 +25,9 @@ function getMyLocation() {
 						myLng = position.coords.longitude;
 						console.log ('nope');
 						console.log(myLng);
-						center = new google.maps.LatLng(myLat, myLng);
+						
 
-						//rendermap();
+						rendermap(myLat,myLng);
 						
 					});
 					//map.setCenter(me);
@@ -37,9 +37,11 @@ function getMyLocation() {
 				}
 			}
 
-//function rendermap() {
+function rendermap(myLat, myLng) {
+	center = new google.maps.LatLng(myLat, myLng);
+ 	map.setCenter(me);
  	
-//}
+}
 
 function parse() {
 
