@@ -19,7 +19,7 @@ function initialize() {
 		
 		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 		getMyLocation();
-		parse();
+//		parse();
 	}
 
 function getMyLocation() {
@@ -50,7 +50,7 @@ function renderMap() {
 
 }
 
-function parse() {
+/*function parse() {
 
 	request = new XMLHttpRequest();
 	request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
