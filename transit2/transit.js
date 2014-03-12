@@ -18,13 +18,13 @@ var me= new google.maps.LatLng(myLat, myLng);
 var myOptions = {
     center: me,
     zoom:11
-};console.log(myLat);
+};
 
 var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 var marker = new google.maps.Marker({
     position: me,
     title: "Work damn you"
-});
+});console.log(myLat);
 marker.setMap(map);
 infoWindow = new google.maps.InfoWindow();
 google.maps.event.addListener(marker, 'click', function(){
