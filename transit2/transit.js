@@ -3,6 +3,7 @@ var me;
 var color;
 var bubble = new google.maps.InfoWindow();
 var marker;
+var m;
 
 function getMyLocation() {
 				
@@ -79,7 +80,7 @@ for (var i =0; i < 3; i++){
                 
                 if (color == 'red'){
                         
-                var m = new google.maps.Marker({
+                m = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"],
                     map: map,
@@ -87,12 +88,34 @@ for (var i =0; i < 3; i++){
                     
                 });
             }else {
-                var m = new google.maps.Marker({
+                 m = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"],
                     map: map,
                 });
             }
+
+           distance();
+
+
+                google.maps.event.addListener(m, 'click', function(){
+                    bubble.setContent(m.title);
+                    bubble.open(map, m);
+                });
+                       
+            }
+
+            }
+    
+            }
+
+    }
+    
+
+function distance (){
+Number.prototype.toRad = function(){
+               return this * Math.PI / 180; 
+           }
 
             var lat2 = m.position.lat(); 
             var lng2 = m.position.lng();
@@ -113,27 +136,6 @@ for (var i =0; i < 3; i++){
             console.log(d); 
 
 
-                google.maps.event.addListener(m, 'click', function(){
-                    bubble.setContent(m.title);
-                    bubble.open(map, m);
-                });
-                       
-            }
-
-            }
-    
-            }
-
-    }
-    Number.prototype.toRad = function(){
-               return this * Math.PI / 180; 
 }
-
-
-
-
-
-
-
 
 
