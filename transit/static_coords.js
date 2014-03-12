@@ -38,9 +38,9 @@ function getMyLocation() {
 			}
 
 function rendermap(myLat, myLng) {
-	center = new google.maps.LatLng(myLat, myLng);
+	var me = new google.maps.LatLng(myLat, myLng);
  	map.setCenter(me);
- 	
+
 }
 
 function parse() {
