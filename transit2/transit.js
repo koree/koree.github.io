@@ -76,7 +76,7 @@ for (var i =0; i < 3; i++){
                 //console.log(parsed[i]["stations"][j]["station_name"]);
                 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
                 
-                if (color == red){
+                if (color == 'red'){
                         
                 var m = new google.maps.Marker({
                     position: t_coords, 
