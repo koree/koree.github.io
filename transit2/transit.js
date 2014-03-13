@@ -4,6 +4,8 @@ var color;
 var bubble = new google.maps.InfoWindow();
 var marker;
 var m = [];
+var shortest;
+var shortname;
 
 
 function getMyLocation() {
@@ -65,7 +67,7 @@ var locations = [];
 
 function mapinfo(){
 
-var shortest = 4000;
+
 
 for (var i =0; i < 3; i++){
 
@@ -95,7 +97,7 @@ for (var i =0; i < 3; i++){
                     map: map,
                 });
             }
-            var shortname;
+           
            var length = distance(m[j]); //distance function
             if (length < shortest){
             shortest = length;
@@ -116,7 +118,7 @@ console.log(shortname);
             }
     
             }
-//alert(shortname + "is closest to you, just" + shortest + "miles away!");
+alert(shortname + "is closest to you, just" + shortest + "miles away!");
     }
     
 
