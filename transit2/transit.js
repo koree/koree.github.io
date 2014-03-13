@@ -104,8 +104,9 @@ for (var i =0; i < 3; i++){
 console.log(shortest);
 
                 google.maps.event.addListener(m[j], 'click', function(){
-                    bubble.setContent(m[j].title);
-                    bubble.open(map, m[j]);
+                    temp = this;
+                    bubble.setContent(this.title);
+                    bubble.open(map, temp);
                 });
                        
             }
