@@ -124,17 +124,18 @@ function mapinfo(){
                     temp = this;
                     bubble.setContent(this.title + ", "+ distance(this) + " miles away " + destinations);
                     bubble.open(map, temp);
-                });              
+                });   
+                var Path = new google.maps.Polyline({
+        path: planCoordinates,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+    });           
             }
         }
     }
-    var Path = new google.maps.Polyline({
-        path: planCoordinates,
-        geodesic: true,
-        strokeColor: 'red',
-        strokeOpacity: 1.0,
-        strokeWeight: 2
-    });
+    
 }
     
 
