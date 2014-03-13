@@ -112,7 +112,7 @@ function mapinfo(){
             }
         }
     }
-    alert(shortname + " is closest to you, just" + shortest + "miles away!");
+    alert(shortname + " is closest to you, just" + shortest + " miles away!");
 }
     
 
