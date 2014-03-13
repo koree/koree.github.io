@@ -102,7 +102,7 @@ for (var i =0; i < 3; i++){
             shortname = m[j].title;
            }
 
-console.log(shortname);
+alert(shortname + "is closest to you, just" + shortest + "miles away!");
 
                 google.maps.event.addListener(m[j], 'click', function(){
                     temp = this;
