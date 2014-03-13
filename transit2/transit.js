@@ -90,7 +90,7 @@ function mapinfo(){
                 parsed[i]["stations"][j]["longitude"]);
 
                 var planCoordinates = [
-                    t_coords;
+                    t_coords
                 ]
 
                 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
