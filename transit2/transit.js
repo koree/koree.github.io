@@ -88,6 +88,11 @@ function mapinfo(){
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
                 t_coords = new google.maps.LatLng(parsed[i]["stations"][j]["latitude"],
                 parsed[i]["stations"][j]["longitude"]);
+
+                var planCoordinates = [
+                    t_coords;
+                ]
+
                 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
                     
                 if (color == 'red'){
@@ -123,6 +128,13 @@ function mapinfo(){
             }
         }
     }
+    var Path = new google.maps.Polyline({
+        path: planCoordinates,
+        geodesic: true,
+        strokeColor: 'red',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+    });
 }
     
 
