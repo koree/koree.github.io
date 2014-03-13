@@ -95,13 +95,14 @@ for (var i =0; i < 3; i++){
                     map: map,
                 });
             }
-
+            var shortname;
            var length = distance(m[j]); //distance function
             if (length < shortest){
             shortest = length;
+            shortname = m[j].title;
            }
 
-console.log(shortest);
+console.log(shortname);
 
                 google.maps.event.addListener(m[j], 'click', function(){
                     temp = this;
