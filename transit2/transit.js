@@ -65,58 +65,55 @@ var locations = [];
 
 function mapinfo(){
 
-var shortest = 4000;
-var shortname;
+    var shortest = 4000;
+    var shortname;
 
-for (var i =0; i < 3; i++){
+    for (var i =0; i < 3; i++){
 
-    if (parsed[i]["line"] == color){ 
-        
-        console.log('come on already');
+        if (parsed[i]["line"] == color){ 
+            
+            console.log('come on already');
 
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
                 t_coords = new google.maps.LatLng(parsed[i]["stations"][j]["latitude"],
-                    parsed[i]["stations"][j]["longitude"]);
+                parsed[i]["stations"][j]["longitude"]);
                 //console.log(parsed[i]["stations"][j]["station_name"]);
                 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-                
-                if (color == 'red'){
-                        
-                m[j] = new google.maps.Marker({
-                    position: t_coords, 
-                    title: parsed[i]["stations"][j]["station_name"],
-                    map: map,
-                    icon: iconBase + 'schools_maps.png'
                     
-                });
-            }else {
-                m[j] = new google.maps.Marker({
-                    position: t_coords, 
-                    title: parsed[i]["stations"][j]["station_name"],
-                    map: map,
-                });
-            }
-            
-           var length = distance(m[j]); //distance function
-            if (length < shortest){
-            shortest = length;
-            shortname = m[j].title;
-           }
+                if (color == 'red'){
+                            
+                    m[j] = new google.maps.Marker({
+                        position: t_coords, 
+                        title: parsed[i]["stations"][j]["station_name"],
+                        map: map,
+                        icon: iconBase + 'schools_maps.png'
+                        
+                    });
+                }else {
+                    m[j] = new google.maps.Marker({
+                        position: t_coords, 
+                        title: parsed[i]["stations"][j]["station_name"],
+                        map: map,
+                    });
+                }
+                
+                var length = distance(m[j]); //distance function
+                if (length < shortest){
+                    shortest = length;
+                    shortname = m[j].title;
+                }
 
 
                 google.maps.event.addListener(m[j], 'click', function(){
                     temp = this;
                     bubble.setContent(this.title);
                     bubble.open(map, temp);
-                });
-                       
+                });              
             }
-
-            }
-    
-            }
-    alert(shortname + "is closest to you, just" + shortest + "miles away!");
+        }
     }
+    alert(shortname + "is closest to you, just" + shortest + "miles away!");
+}
     
 
 function distance (m){
