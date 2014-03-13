@@ -107,8 +107,7 @@ function mapinfo(){
 
                 google.maps.event.addListener(m[j], 'click', function(){
                     temp = this;
-                    var mess = this.title + ", " distance(this) + " miles away";
-                    bubble.setContent(mess);
+                    bubble.setContent(this.title + distance(this));
                     bubble.open(map, temp);
                 });              
             }
