@@ -42,7 +42,7 @@ function initialize(position){
     });
 
     parse();
-    console.log(myLat, myLng); // program has gotten this far... still no map
+    
 }
 
 function parse() {
@@ -54,7 +54,7 @@ str = '[{"line":"blue","stations":[{"station_name":"Airport", "latitude":"42.374
         if (request.status ==200 && request.readyState ==4){
             lineinfo = JSON.parse(request.responseText);
             color = lineinfo["line"];
-            console.log(color);
+            
             mapinfo();
         }else if(request.status == 500 && request.readyState==4){
             alert ("unable to get MBTA info at this time");
@@ -74,12 +74,11 @@ function mapinfo(){
 
         if (parsed[i]["line"] == color){ 
             
-            console.log('come on already');
+         
 
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
                 t_coords = new google.maps.LatLng(parsed[i]["stations"][j]["latitude"],
                 parsed[i]["stations"][j]["longitude"]);
-                //console.log(parsed[i]["stations"][j]["station_name"]);
                 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
                     
                 if (color == 'red'){
