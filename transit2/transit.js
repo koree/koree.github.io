@@ -97,6 +97,7 @@ function mapinfo(){
                     });
                 }
                 
+
                 var length = distance(m[j]); //distance function
                 if (length < shortest){
                     shortest = length;
@@ -106,7 +107,7 @@ function mapinfo(){
 
                 google.maps.event.addListener(m[j], 'click', function(){
                     temp = this;
-                    bubble.setContent(this.title);
+                    bubble.setContent(this.title + distance(this);
                     bubble.open(map, temp);
                 });              
             }
