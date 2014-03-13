@@ -67,6 +67,15 @@ str = '[{"line":"blue","stations":[{"name":"Airport", "latitude":"42.374262", "l
 var locations = [];
 
 function mapinfo(){
+    var destinations;
+
+    if (color == "red"){
+        destinations = "(Alewife<->Ashmont/Braintree)";
+    }else if (color =="blue"){
+        destinations = "(Wonderland<->Bowdoin)";
+    }else if (color == "orange"){
+        destinations = "(Oak Grove<->Forest Hills)"
+    }
 
    shortest = 4000;
 
@@ -108,7 +117,7 @@ function mapinfo(){
 
                 google.maps.event.addListener(m[j], 'click', function(){
                     temp = this;
-                    bubble.setContent(this.title + ", "+ distance(this) + " miles away");
+                    bubble.setContent(this.title + ", "+ distance(this) + " miles away " + destinations);
                     bubble.open(map, temp);
                 });              
             }
