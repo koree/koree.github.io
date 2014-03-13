@@ -64,14 +64,14 @@ var locations = [];
 
 function mapinfo(){
 
+var shortest = 4000;
+
 for (var i =0; i < 3; i++){
 
     if (parsed[i]["line"] == color){ 
 
         console.log('come on already')
 
-    
-        
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
                 t_coords = new google.maps.LatLng(parsed[i]["stations"][j]["latitude"],
                     parsed[i]["stations"][j]["longitude"]);
@@ -96,8 +96,7 @@ for (var i =0; i < 3; i++){
             }
 
            var length = distance(m); //distance function
-           var shortest = (4000/1); 
-           if (length < shortest){
+            if (length < shortest){
             shortest = length;
            }
 
