@@ -69,7 +69,7 @@ var shortest = 4000;
 for (var i =0; i < 3; i++){
 
     if (parsed[i]["line"] == color){ 
-
+        var m;
         console.log('come on already')
 
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
@@ -80,7 +80,7 @@ for (var i =0; i < 3; i++){
                 
                 if (color == 'red'){
                         
-                var m = new google.maps.Marker({
+                m = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"],
                     map: map,
@@ -88,7 +88,7 @@ for (var i =0; i < 3; i++){
                     
                 });
             }else {
-                 var m = new google.maps.Marker({
+                m = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"],
                     map: map,
