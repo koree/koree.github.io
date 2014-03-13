@@ -3,6 +3,7 @@ var me;
 var color;
 var bubble = new google.maps.InfoWindow();
 var marker;
+var m = [];
 
 
 function getMyLocation() {
@@ -69,8 +70,8 @@ var shortest = 4000;
 for (var i =0; i < 3; i++){
 
     if (parsed[i]["line"] == color){ 
-        var m;
-        console.log('come on already')
+        
+        console.log('come on already');
 
             for (var j = 0; parsed[i]["stations"][j] != null; ++j){
                 t_coords = new google.maps.LatLng(parsed[i]["stations"][j]["latitude"],
@@ -80,7 +81,7 @@ for (var i =0; i < 3; i++){
                 
                 if (color == 'red'){
                         
-                m = new google.maps.Marker({
+                m[j] = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"],
                     map: map,
@@ -88,23 +89,23 @@ for (var i =0; i < 3; i++){
                     
                 });
             }else {
-                m = new google.maps.Marker({
+                m[j] = new google.maps.Marker({
                     position: t_coords, 
                     title: parsed[i]["stations"][j]["station_name"],
                     map: map,
                 });
             }
 
-           var length = distance(m); //distance function
+           var length = distance(m[j]); //distance function
             if (length < shortest){
             shortest = length;
            }
 
 console.log(shortest);
 
-                google.maps.event.addListener(m, 'click', function(){
-                    bubble.setContent(m.title);
-                    bubble.open(map, m);
+                google.maps.event.addListener(m[j], 'click', function(){
+                    bubble.setContent(m[j].title);
+                    bubble.open(map, m[j]);
                 });
                        
             }
