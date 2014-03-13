@@ -4,6 +4,8 @@ var color;
 var bubble = new google.maps.InfoWindow();
 var marker;
 var m = [];
+ var shortest = 4000;
+    var shortname;
 
 
 function getMyLocation() {
@@ -34,7 +36,7 @@ function initialize(position){
     marker.setMap(map);
   
     google.maps.event.addListener(marker, 'click', function(){
-        bubble.setContent(marker.title);
+        bubble.setContent(marker.title + shortname);
         bubble.open(map, marker);
     });
 
@@ -65,8 +67,7 @@ var locations = [];
 
 function mapinfo(){
 
-    var shortest = 4000;
-    var shortname;
+   
 
     for (var i =0; i < 3; i++){
 
