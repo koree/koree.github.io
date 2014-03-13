@@ -66,6 +66,7 @@ var locations = [];
 function mapinfo(){
 
 var shortest = 4000;
+var shortname;
 
 for (var i =0; i < 3; i++){
 
@@ -95,15 +96,13 @@ for (var i =0; i < 3; i++){
                     map: map,
                 });
             }
-            var shortname;
+            
            var length = distance(m[j]); //distance function
             if (length < shortest){
             shortest = length;
             shortname = m[j].title;
            }
 
-console.log(shortest);
-console.log(shortname);
 
                 google.maps.event.addListener(m[j], 'click', function(){
                     temp = this;
@@ -116,7 +115,7 @@ console.log(shortname);
             }
     
             }
-alert(shortname + "is closest to you, just" + shortest + "miles away!");
+    alert(shortname + "is closest to you, just" + shortest + "miles away!");
     }
     
 
