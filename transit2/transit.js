@@ -4,7 +4,7 @@ var color;
 var bubble = new google.maps.InfoWindow();
 var marker;
 var m = [];
- var shortest = 4000;
+ var shortest;
     var shortname;
 
 
@@ -68,7 +68,7 @@ var locations = [];
 
 function mapinfo(){
 
-   
+   shortest = 4000;
 
     for (var i =0; i < 3; i++){
 
