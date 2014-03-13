@@ -36,7 +36,8 @@ function initialize(position){
     marker.setMap(map);
   
     google.maps.event.addListener(marker, 'click', function(){
-        bubble.setContent(marker.title + shortname);
+        bubble.setContent(marker.title + " " + shortname + " is the closest station to you, just " +
+            shortest " miles away!");
         bubble.open(map, marker);
     });
 
