@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html>
+
+<head> 
+	<title> Web Security  </title>
+	<link rel="stylesheet" href="index.css" type="text/css" />
+	<meta charset='utf-8'>
+	 
+
+</head>
+
+<body>
+
+
+<h1>Security Vulrnabilities of stark-bayou-4626.herokuapp.com (Raewyn Duvall)</h1>
+
+<div id = "section"> Introduction </div>
+<p>The web app we made in heroku for the 2048 game was riddled with security flaws that definitely need
+addressing. I have found that it is quite easy to manipulate webpages, like the example we have here from
+Raewyn Duvall, in order to perform malicious functions or crash the app. Below are my observations and 
+recommendations on how to improve this website. </p>
+
+<div id = "section"> Methodology </div>
+<p>It was rather easy to test the vulnerabilities of the web application. Simply using the "curl" command 
+allowed me to enter in my own data, injecting code and testing out other vulnerabilites. Other tests
+were done online, seeing if the URI would respond by changing the query. In Raewyn's case, this was 
+not an issue, but could be for others. </p> 
+
+<div id = "section"> Abstract of Findings </div>
+<p>It was not difficult to find some basic security vulnerabilities in Raewyn's app. The top three 
+security vulnerabilities were easy to find and are listed below: <br/>
+-The web app does not evaluate incoming input, so any user can potentially inject code directly
+into the database just by simply sending their own code to the app for entry into the database. I 
+was able to do this myself, and my resulting code redirected the web app to a youtube video. While this
+is harmless, others could use it to redirect to a malicious website or also collect data by farming
+clicks. <br/>
+-The way that Cross-Origin-Resource-Sharing is set up, anyone can have access to the web app. This means
+that anyone is able to give input, including potentially skewed data, excessive data, or malicious code as 
+mentioned above. By limiting access (limiting CORS) to those with certain credentials, there is significantly 
+less risk of attack.
+-The database used (MongoLabs) allows a file size input of 16MB. While this seems small, it would be easy for 
+someone to spam the database with multiple relatively-large files. This could crash the program easily for 
+attackers and make a general mess for those not wanting to scour the database in search of the malicious data
+each time.</p>
+
+<div id = "section"> Issues </div>
+<div id = "problem"> Code Injecting</div>
+<p>-Issue found in post API, /submitscores. <br/>
+-High Risk, easy to redirect page or inject malicious code <br/>
+-It is very easy to inject code disguised as game data through the post API. The game requires that all
+requested data be present, but does not have any checks if the data is sincere. Injecting code in as data allows 
+anyone to change the page when it is loaded on the root directory (/). I changed the website to a picture, as seen here: 
+<img src="injection.jpg" width= "200" height= "150"  alt="O'Doyle Rules" /> 
+-The fix for this is relatively easy. The app simply needs to check for correct input, and can do so by using the
+Caja-HTML-Sanitizer (found at https://github.com/theSmaw/Caja-HTML-Sanitizer). By installing the sanitizer in the app, 
+HTML special characters can easily be escaped, and tags can be sanitized, leaving harmful code injections as simple text.</p>
+
+
+
+
+
+
+</body>
+
+</html> 
