@@ -1,0 +1,14 @@
+body{
+	background-color: pink;
+	font-family: Helvetica;
+	text-align: center;
+}
+#section	{
+	font-size: 25px;
+	color: blue;
+}
+#problem{
+	font-size: 16px;
+	color: green;
+}
+
