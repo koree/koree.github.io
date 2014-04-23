@@ -4,11 +4,12 @@ body{
 	text-align: center;
 }
 #section	{
-	font-size: 25px;
+	font-size: 30px;
 	color: blue;
+	font-weight: bold;
 }
 #problem{
-	font-size: 16px;
+	font-size: 25px;
 	color: green;
 }
 
