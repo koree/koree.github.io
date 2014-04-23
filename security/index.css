@@ -3,6 +3,12 @@ body{
 	font-family: Helvetica;
 	text-align: left;
 }
+
+h1{
+	text-align: center;
+	color: purple;
+}
+
 #section	{
 	font-size: 30px;
 	color: blue;
