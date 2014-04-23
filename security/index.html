@@ -57,7 +57,7 @@ anyone to change the page when it is loaded on the root directory (/). I changed
 <p>-The fix for this is relatively easy. The app simply needs to check for correct input, and can do so by using the
 Caja-HTML-Sanitizer (found at https://github.com/theSmaw/Caja-HTML-Sanitizer). By installing the sanitizer in the app, 
 HTML special characters can easily be escaped, and tags can be sanitized, leaving harmful code injections as simple text. <br/>
-EXAMPLE: var sanitizer = require('sanitizer');
+EXAMPLE: var sanitizer = require('sanitizer');<br/>
 sanitizer.excape('fake data'); </p>
 
 <div id = "problem"> Cross Origin Resource Sharing (CORS)</div>
@@ -74,13 +74,12 @@ my input here, clearly NOT from the 2048 game. Below we can see that my attack h
 CORS will only be enabled for certain sites. This can be easily linked to a php file with all the limits put in place, so that 
 updates are not required for individual pages as long as they are linked to the php page (which therefore updates all approved
 sites). <br/>
-EXAMPLE: 
-<?php
-    if($_SERVER['HTTP_ORIGIN'] == "MySafeURI”)
-    {
-      header('Access-Control-Allow-Origin: MySafeURI');
+EXAMPLE (in php file): 
+	if($_SERVER['HTTP_ORIGIN'] == "MySafeURI”)
+    {<br/>
+      header('Access-Control-Allow-Origin: MySafeURI');<br/>
     }
-  ?> 
+  
   </p> 
 
 
