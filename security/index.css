@@ -9,6 +9,12 @@ h1{
 	color: purple;
 }
 
+#title {
+	border-width: 10px;
+	margin: 28px;
+	border-style: solid;
+}
+
 #section	{
 	font-size: 30px;
 	color: blue;
