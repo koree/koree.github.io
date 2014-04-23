@@ -1,20 +1,18 @@
 body{
 	background-color: pink;
 	font-family: Helvetica;
-	text-align: center;
+	text-align: left;
 }
 #section	{
 	font-size: 30px;
 	color: blue;
 	font-weight: bold;
+	text-align: center;
 }
 #problem{
 	font-size: 25px;
 	color: green;
-}
-
-p{
-	text-align: left;
+	text-align: center;
 }
 
 #img{
@@ -23,5 +21,5 @@ p{
 
 #eg{
 	font-weight: bold;
-	text-align: left;
+	
 }
