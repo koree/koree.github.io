@@ -52,7 +52,7 @@ each time.</p>
 requested data be present, but does not have any checks if the data is sincere. Injecting code in as data allows 
 anyone to change the page when it is loaded on the root directory (/). I changed the website to a picture, as seen here: <br/> 
 
-<div id = "img"><img src="injection.jpg" width= "400" height= "330"  alt="O'Doyle Rules" />  <br/> </div> </p>
+<div id = "img"><img src="injection.jpg" width= "450" height= "300"  alt="O'Doyle Rules" />  <br/> </div> </p>
 
 <p>-The fix for this is relatively easy. The app simply needs to check for correct input, and can do so by using the
 Caja-HTML-Sanitizer (found at https://github.com/theSmaw/Caja-HTML-Sanitizer). By installing the sanitizer in the app, 
@@ -68,7 +68,7 @@ otherwise. In a situation like with the 2048 game, this is not necessary, as the
 web page sending the score data. Without a list of acceptable files, input can come from anywhere - as demonstrated by
 my input here, clearly NOT from the 2048 game. Below we can see that my attack has easily been entered into the database: <br/> 
 
-<div id = "img"><img src="CORS.jpg" width= "400" height= "330"  alt="CORS attack" />  <br/> </div> </p>
+<div id = "img"><img src="CORS.jpg" width= "450" height= "300"  alt="CORS attack" />  <br/> </div> </p>
 
 <p>-Once again, this is a relatively simple fix. By including an "if" statement, we can eliminate sharing from other websites.
 CORS will only be enabled for certain sites. This can be easily linked to a php file with all the limits put in place, so that 
