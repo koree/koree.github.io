@@ -38,7 +38,7 @@ clicks. <br/>
 -The way that Cross-Origin-Resource-Sharing is set up, anyone can have access to the web app. This means
 that anyone is able to give input, including potentially skewed data, excessive data, or malicious code as 
 mentioned above. By limiting access (limiting CORS) to those with certain credentials, there is significantly 
-less risk of attack.
+less risk of attack. <br/>
 -The database used (MongoLabs) allows a file size input of 16MB. While this seems small, it would be easy for 
 someone to spam the database with multiple relatively-large files. This could crash the program easily for 
 attackers and make a general mess for those not wanting to scour the database in search of the malicious data
@@ -58,7 +58,7 @@ anyone to change the page when it is loaded on the root directory (/). I changed
 Caja-HTML-Sanitizer (found at https://github.com/theSmaw/Caja-HTML-Sanitizer). By installing the sanitizer in the app, 
 HTML special characters can easily be escaped, and tags can be sanitized, leaving harmful code injections as simple text. <br/>
 <div id = "eg">EXAMPLE: </div> var sanitizer = require('sanitizer');<br/>
-sanitizer.excape('fake data'); </p>
+sanitizer.escape('fake data'); </p>
 
 <div id = "problem"> Cross Origin Resource Sharing (CORS)</div>
 <p>-Issue found in web app, all APIs. <br/>
@@ -79,12 +79,30 @@ sites). <br/>
     {<br/>
       header('Access-Control-Allow-Origin: MySafeURI');<br/>
     }
-  
-  </p> 
+</p> 
 
+<div id = "problem"> MongoLab Multiple Files (Loop)</div>
+<p>-Issue found on MongoDb <br/>
+-Medium Risk, relatively easy to send multiple files with a program  <br/>
+-MongoLabs allows a maximum of 0.5gb of free storage using the sandbox version of their application. By simply using a "for" 
+loop, I was able to easily send records of data multiple time. Sending around 30kb per post, I was able to send about 54mb
+of data before Mongolabs crashed. The page would not load information from the database for scores. Had I continued, I could
+easily have filled the 0.5gb of data that was alotted under the free plan, destroying the database's capabilities until 
+it was deleted. Even after it was deleted, another for loop could repeat the process.  <br/> 
 
+<div id = "img"><img src="crash.png" width= "450" height= "300"  alt="CORS attack" />  <br/> </div> 
+<div id = "img"><img src="crash2.jpg" width= "450" height= "300"  alt="CORS attack" />  <br/> </div> </p>
 
-
+<p>-This fix is not as simple as the other two. One suggestion would be to check the username of each incoming data and check 
+it against existing data. Limiting the number of submissions is important for thwarting loops. Each submission has a time 
+stamp with it from the webapp itself, and if the username is in the database, the most recent submission should have to be 
+"X" number of seconds away from the current submission. For example, if the limit is 15 seconds and the most recent is 4:32:12, 
+then one cannot submit at 4:32:25, but can at 4:32:38. This limits the effectiveness of sending data in long loops.  <br/>
+<div id = "eg"> EXAMPLE (in pseudo-code): </div>
+	if (new_timestamp - old_timestamp > 15){ <br/>
+		POST CODE HERE; <br/>
+}
+</p> 
 
 
 
