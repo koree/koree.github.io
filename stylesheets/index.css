@@ -1,6 +1,6 @@
 body {
 	font-family: 'Lobster';
-	color: blue;
+	color: black;
 	text-align: center;
 	background-size:100% 150%;
 	background-repeat:no-repeat;
@@ -8,4 +8,7 @@ body {
 }
 #contrast{
 	color: transparent;
+}
+p{
+	border-color: black;
 }
