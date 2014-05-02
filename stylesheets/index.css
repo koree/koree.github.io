@@ -9,6 +9,13 @@ body {
 #contrast{
 	color: transparent;
 }
+h1{
+	border:1px solid black;
+	color: blue;
+  	opacity:0.4;
+  	background-color: #ffffff
+}
 p{
 	border-color: black;
+
 }
