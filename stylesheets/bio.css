@@ -1,0 +1,15 @@
+body {
+	font-family: 'Lobster';
+	color: black;
+	text-align: center;
+	background-size:100% 150%;
+	background-repeat:no-repeat;
+
+}
+
+h1{
+	border:1px solid black;
+	color: blue;
+  	opacity:0.4;
+  	background-color: #ffffff
+}
