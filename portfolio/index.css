@@ -2,8 +2,8 @@ body {
 	font-family: 'Lobster';
 	color: black;
 	text-align: center;
-	background-size:100% 150%;
-	background-repeat:no-repeat
+	background-size:100% 513%;
+	background-repeat:no-repeat;
 
 }
 
@@ -23,5 +23,5 @@ p{
 
 #text{
 	color: black;
-	font-family: Cambria
+	font-family: Cambria;
 }
