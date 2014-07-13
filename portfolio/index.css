@@ -17,7 +17,7 @@ h1{
 #transbox{
 	border:1px solid black;
 	opacity:0.6;
-  	background-color: #ffffff;
+  	background-color: gray;
 }
 
 #transbox p {
@@ -29,7 +29,7 @@ h1{
 #info {
 	font-family: Cambria;
 	font-weight: bold;
-	border: 1px solid black;
+	border: 2px solid black;
 	text-align: left;
 	background-color: gray;
 	opacity:0.6;
