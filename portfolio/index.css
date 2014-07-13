@@ -26,3 +26,12 @@ h1{
 	font-family: Cambria;
 }
 
+#info {
+	font-family: Cambria;
+	border: 1px solid black;
+	text-align: right;
+	background-color: gray;
+	opacity:0.6;
+
+}
+
