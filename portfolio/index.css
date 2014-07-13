@@ -3,7 +3,7 @@ body {
 	color: black;
 	text-align: center;
 	background-size:100% 150%;
-	background-repeat:no-repeat;
+	background-repeat:no-repeat
 
 }
 
@@ -18,10 +18,10 @@ p{
 	border:1px;
 	border-color: black;
 	opacity:0.4;
-  	background-color: #ffffff;
+  	background-color: #ffffff
 }
 
 #text{
 	color: black;
-	font-family: Cambria;
+	font-family: Cambria
 }
