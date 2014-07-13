@@ -10,14 +10,13 @@ body {
 h1{
 	border:1px solid black;
 	color: blue;
-	background: rgba(0, 0, 0, 0.4);
-  	background-color: #ffffff
-  	
+	background-color: #ffffff
+  	background: rgba(0, 0, 0, 0.4);
 }
 #transbox{
 	border:1px solid black;
 	background-color: gray;
-	background: rgba(0, 0, 0, 0.6);;
+	background: rgba(0, 0, 0, 0.6);
   	
 }
 
