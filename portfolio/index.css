@@ -15,8 +15,7 @@ h1{
   	
 }
 p{
-	border:1px;
-	border-color: black;
+	border:1px solid black;
 	opacity:0.4;
   	background-color: #ffffff
 }
