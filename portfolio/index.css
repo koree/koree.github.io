@@ -10,13 +10,13 @@ body {
 h1{
 	border:1px solid black;
 	color: blue;
-	opacity:0.4;
+	background: rgba(0, 0, 0, 0.4);
   	background-color: #ffffff
   	
 }
 #transbox{
 	border:1px solid black;
-	opacity:0.6;
+	background: rgba(0, 0, 0, 0.6);;
   	background-color: gray;
 }
 
@@ -38,5 +38,5 @@ h1{
 #project{
 	font-family: 'Lobster';
 	font-weight: bold;
-	
+
 }
