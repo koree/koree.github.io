@@ -1,0 +1,21 @@
+body {
+background-image: url('birthday.gif');
+	background-repeat: repeat;
+}
+
+#credits {
+font-size: 36px;
+font-family: Helvetica;
+color: #D75A26;
+-webkit-text-fill-color: #D75A26;
+        -webkit-text-stroke: 5px black;
+
+
+text-align: center;
+}
+
+#img{
+	text-align: center;
+}
+
+

@@ -1,0 +1,20 @@
+@media (min-width: 992px){
+#nodogs{
+display: none;
+}
+body {
+background-image: url('birthday.gif');
+	background-repeat: repeat;
+}
+}
+#credits {
+font-size: 36px;
+font-family: Helvetica;
+color: black;
+
+
+
+text-align: center;
+}
+
+
