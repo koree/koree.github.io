@@ -1,10 +1,13 @@
 body {
 background-image: url('birthday.gif');
 	background-repeat: repeat;
+	background-width: 50;
+	background-height: 50;
+
 }
 
 #credits {
-font-size: 36px;
+font-size: 32px;
 font-family: Helvetica;
 color: #D75A26;
 -webkit-text-fill-color: #D75A26;
