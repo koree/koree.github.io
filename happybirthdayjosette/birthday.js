@@ -3,6 +3,8 @@ function play() {
     if (audio.paused) {
         audio.play();
     }else{
-        audio.currentTime = 0
+        if (audio.play) {
+        audio.pause();
+    }
     }
 }
